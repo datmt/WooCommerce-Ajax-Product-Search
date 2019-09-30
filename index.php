@@ -35,9 +35,11 @@ class BC_AJAX_Product_Search
 	}
 
 	public function plugin_ui()
-	{
-
-	}
+	{ ?>
+		<h1>Select your products</h1>
+		<select data-security="<?php echo wp_create_nonce( 'search-products' ); ?>" multiple style="width: 300px;" class="bc-product-search"></select>
+        <button class="show-selected-results">Show select results</button>
+	 <?php }
 
 
 	public function enqueue_admin() {
